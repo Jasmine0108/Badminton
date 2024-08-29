@@ -1,4 +1,4 @@
-*.joblib
+models/
 public/
 badminton-venv/
 .env
