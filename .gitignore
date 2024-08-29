@@ -1,4 +1,4 @@
 models/
-datasets/
+data/
 badminton-venv/
 .env

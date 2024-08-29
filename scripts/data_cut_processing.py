@@ -8,14 +8,14 @@ def store_csv_file(data, timestamps, file_name):
     for timestamp in timestamps:
         file_name = file_name.replace('.txt', '')
         file_path = os.path.join(file_name + '_' + str(count) + '.csv')
-        with open('./public/cut/' + file_path, 'w', newline='') as csvfile:
+        with open('../data/processed/' + file_path, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile, delimiter=',')
             for t in range(int(timestamp / 10) - 50, int(timestamp / 10) + 75): #-75,+25
                 writer.writerow(data[t][:])
             count += 1
 
 
-folder_path = "./public/dataset"
+folder_path = "../data/origin"
 for file_name in os.listdir(folder_path):
     file_path = os.path.join(folder_path, file_name)
     with open(file_path, 'r') as file:

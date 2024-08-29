@@ -21,9 +21,9 @@ class SumData:
 json_list = []
 sum_data = SumData()
 
-grade_comment_path= "public/grade_and_comment.csv"
+grade_comment_path= "../data/grade_and_comment.csv"
 df_grade_comment = pd.read_csv(grade_comment_path)
-folder_path = "public/cut"
+folder_path = "../data/processed"
 
 def create_json_file(file_name, file_number, swing_total):
     print('start create json file.', file_number)
@@ -77,7 +77,7 @@ for file_name in os.listdir(folder_path):
     swing_total += 1
 
 # create new json file
-output_file = f'public/grade_and_comment.json'
+output_file = '../data/grade_and_comment.json'
 with open(output_file, 'w', encoding='utf-8') as file:
     json.dump(json_list, file, ensure_ascii=False, indent=4)
 print('create json file successfully!')
