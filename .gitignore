@@ -1,4 +1,5 @@
 models/
+model_old/
 data/
 badminton-venv/
 .env
